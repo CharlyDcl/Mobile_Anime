@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "413582357247",
+    "firebase_url": "https://animeapp-3a269.firebaseio.com",
+    "project_id": "animeapp-3a269",
+    "storage_bucket": "animeapp-3a269.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413582357247:android:8c719492a3e49c91",
+        "android_client_info": {
+          "package_name": "fr.esiea.anime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413582357247-b724ukg0dph91v1rarvslm8p6nd99kge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Kmud4rmuVesMGI-3Ye3oXEoo1k3fsiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
