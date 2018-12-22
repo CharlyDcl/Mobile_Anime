@@ -24,17 +24,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-           <Button android:onClick="@{() -> viewmodel.generateItem()}"
-                android:text="generate a new number"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content">
-            </Button>
-            <Button android:onClick="@{() -> viewmodel.clear()}"
-                android:text="clear list"
+                android:autofillHints="Enter Anime"
+                android:inputType="" />
+
+
+            <Button
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content">
-            </Button>
+                android:onClick="@{() -> viewmodel.clear()}"
+                android:text="@string/search"></Button>
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
