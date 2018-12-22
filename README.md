@@ -2,7 +2,7 @@
 
 - In the first activity you can search for animes fetched from an API with Retrofit.
 
-- When you click on an anime you get details for this one.
+- When you click on an anime you get details about this one.
 
 - If you click on "add to favorite" it is added to the database and display on favorite activity.
 
