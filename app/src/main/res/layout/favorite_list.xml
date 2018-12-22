@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="fr.esiea.anime.ViewModel.FavoriteItemListViewModel"/>
+        <variable
+            name="item"
+            type="fr.esiea.anime.ViewModel.FavoriteItemViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is your favorites animes"
+            android:textSize="25dp"
+            android:layout_marginBottom="30dp"
+            android:textAlignment="center"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/favorite_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:itemsSource="@{viewmodel.items}"
+            app:itemTemplate="@{@layout/favorite_item_list}"
+            app:onItemTapped="@{ () -> viewmodel.onItemTapped(item)}"/>
+
+    </LinearLayout>
+</layout>

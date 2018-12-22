@@ -6,13 +6,8 @@ public class AnimeResponse {
 
     private String title;
 
-    private String title_english;
-
     @SerializedName("mal_id")
-    private Integer id;
-
-    @SerializedName("image_url")
-    private String image;
+    private int id;
 
     private String url;
 
@@ -31,11 +26,9 @@ public class AnimeResponse {
 
     private String synopsis;
 
-    public AnimeResponse(String title, String title_english, Integer id, String image, String url, String trailer, Integer episodes, String duration, Double score, Integer rank, String background, String synopsis) {
+    public AnimeResponse(String title, int id, String url, String trailer, Integer episodes, String duration, Double score, Integer rank, String background, String synopsis) {
         this.title = title;
-        this.title_english = title_english;
         this.id = id;
-        this.image = image;
         this.url = url;
         this.trailer = trailer;
         this.episodes = episodes;
@@ -54,28 +47,12 @@ public class AnimeResponse {
         this.title = title;
     }
 
-    public String getTitle_english() {
-        return title_english;
-    }
-
-    public void setTitle_english(String title_english) {
-        this.title_english = title_english;
-    }
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getUrl() {

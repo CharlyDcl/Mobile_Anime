@@ -16,26 +16,29 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{viewmodel.screenTitle}"/>
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-           <Button android:onClick="@{() -> viewmodel.generateItem()}"
-                android:text="generate a new number"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content">
-            </Button>
-            <Button android:onClick="@{() -> viewmodel.clear()}"
-                android:text="clear list"
+                android:layout_marginStart="50dp"
+                android:text="@={viewmodel.search}"
+                android:hint="Search for an anime"
+                android:textAlignment="center"
+                android:id="@+id/editText" />
+
+            <Button
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content">
-            </Button>
-        </LinearLayout>
+                android:layout_alignBaseline="@+id/editText"
+                android:layout_alignBottom="@+id/editText"
+                android:layout_toEndOf="@+id/editText"
+                android:onClick="@{() -> viewmodel.ReadFromApi()}"
+                android:text="Search" />
+        </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView
             xmlns:android="http://schemas.android.com/apk/res/android"

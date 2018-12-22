@@ -6,40 +6,36 @@ public class Anime {
 
     private String title;
 
-    private String title_english;
-
     @SerializedName("mal_id")
-    private Integer id;
+    private int id;
 
     private String firebase_id;
-
-    @SerializedName("image_url")
-    private String image;
 
     private String url;
 
     @SerializedName("trailer_url")
     private String trailer;
 
-    private Integer episodes;
+    private String episodes;
 
     private String duration;
 
-    private Double score;
+    private String score;
 
-    private Integer rank;
+    private String rank;
 
     private String background;
 
     private String synopsis;
 
-    public Anime(String title, String title_english, Integer id, String firebase_id, String image, String url, String trailer, Integer episodes, String duration, Double score, Integer rank, String background, String synopsis) {
+    public Anime() {
+    }
+
+    public Anime(String title, int id, String firebase_id, String trailer, String episodes, String duration, String score, String rank, String background, String synopsis) {
         this.title = title;
-        this.title_english = title_english;
         this.id = id;
         this.firebase_id = firebase_id;
-        this.image = image;
-        this.url = url;
+        //this.url = url;
         this.trailer = trailer;
         this.episodes = episodes;
         this.duration = duration;
@@ -57,19 +53,11 @@ public class Anime {
         this.title = title;
     }
 
-    public String getTitle_english() {
-        return title_english;
-    }
-
-    public void setTitle_english(String title_english) {
-        this.title_english = title_english;
-    }
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -79,14 +67,6 @@ public class Anime {
 
     public void setFirebase_id(String firebase_id) {
         this.firebase_id = firebase_id;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getUrl() {
@@ -105,11 +85,11 @@ public class Anime {
         this.trailer = trailer;
     }
 
-    public Integer getEpisodes() {
+    public String getEpisodes() {
         return episodes;
     }
 
-    public void setEpisodes(Integer episodes) {
+    public void setEpisodes(String episodes) {
         this.episodes = episodes;
     }
 
@@ -121,19 +101,19 @@ public class Anime {
         this.duration = duration;
     }
 
-    public Double getScore() {
+    public String getScore() {
         return score;
     }
 
-    public void setScore(Double score) {
+    public void setScore(String score) {
         this.score = score;
     }
 
-    public Integer getRank() {
+    public String getRank() {
         return rank;
     }
 
-    public void setRank(Integer rank) {
+    public void setRank(String rank) {
         this.rank = rank;
     }
 

@@ -7,7 +7,7 @@ public class AnimeSearchResponse {
     private String title;
 
     @SerializedName("mal_id")
-    private Integer id;
+    private int id;
 
     @SerializedName("image_url")
     private String image;
@@ -19,7 +19,7 @@ public class AnimeSearchResponse {
 
     private Double score;
 
-    public AnimeSearchResponse(String title, Integer id, String image, String synopsis, Integer nb_episodes, Double score) {
+    public AnimeSearchResponse(String title, int id, String image, String synopsis, Integer nb_episodes, Double score) {
         this.title = title;
         this.id = id;
         this.image = image;
@@ -36,11 +36,11 @@ public class AnimeSearchResponse {
         this.title = title;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -11,13 +11,9 @@ public class ItemViewModel {
     public ObservableField<String> description = new ObservableField<>();
     public ObservableField<String> episodes = new ObservableField<>();
     public ObservableField<String> score = new ObservableField<>();
-    public Integer id;
+    public int id;
 
-    static Random random = new Random();
-    public int value;
-
-    public ItemViewModel(Context context, String title, String descr, Integer episodes, Double score, Integer id){
-        assign(random.nextInt(100) + 1);
+    public ItemViewModel(Context context, String title, String descr, Integer episodes, Double score, int id){
         this.title.set(title);
         this.description.set(descr);
         this.episodes.set(episodes.toString());
@@ -25,13 +21,4 @@ public class ItemViewModel {
         this.id = id;
     }
 
-    public void squareTwo() {
-        assign(value*2);
-    }
-
-    private void assign(int x) {
-        value = x;
-        title.set(String.valueOf(x*2));
-        description.set(String.valueOf(x));
-    }
 }

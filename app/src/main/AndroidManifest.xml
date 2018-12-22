@@ -17,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".View.DetailActivity"/>
+        <activity android:name=".View.FavoriteActivity"/>
+        <activity android:name=".View.EditActivity"/>
         <activity android:name=".View.MainActivity"/>
     </application>
 
