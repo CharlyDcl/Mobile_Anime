@@ -1,4 +1,4 @@
-# Mobile_Anime
+# Mobile Anime
 
 - In the first activity you can search for animes fetched from an API with Retrofit.
 
