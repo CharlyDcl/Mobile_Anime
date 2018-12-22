@@ -1,15 +1,19 @@
 package fr.esiea.anime.ViewModel;
 
 import android.databinding.ObservableField;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import fr.esiea.anime.Model.Anime.AnimeResponse;
+import fr.esiea.anime.Model.Anime.ResultAnime;
 import fr.esiea.anime.Model.Api.ApiAnime;
 import fr.esiea.anime.Model.Api.ApiInterface;
-import fr.esiea.anime.Model.Anime.ResultAnime;
 import fr.esiea.anime.Model.User;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -55,6 +59,25 @@ public class MainViewModel {
         String id = myRefUsers.push().getKey();
         User user = new User(helloText.get(),helloText.get().toUpperCase(), id);
         myRefUsers.child(id).setValue(user);
-        Log.d("data", "database: " + user);
+        Log.d("data", "database: " + user.getName());
+        myRef.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    Log.d("datakey", "onDataChange: " + ds.getKey());
+                    Log.d("datauser", "onDataChange: " + ds.getValue(User.class).getName());
+                    for (DataSnapshot data : ds.getChildren()) {
+                        //Log.d("data", "onDataChange: " + data.getValue(String.class));
+
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }

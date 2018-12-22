@@ -19,9 +19,10 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityListBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_list);
-        binding.setViewmodel( new ItemListViewModel());
+        binding.setViewmodel( new ItemListViewModel(getApplicationContext()));
         RecyclerView recyclerView = binding.getRoot().findViewById(R.id.data_recycler_view);
         recyclerView.setLayoutManager( new LinearLayoutManager(recyclerView.getContext()));
         recyclerView.addItemDecoration( new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
     }
+
 }
