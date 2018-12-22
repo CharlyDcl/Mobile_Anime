@@ -30,13 +30,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/episode"
-            android:text=""
+            android:text="@{viewmodel.episodes}"
             android:layout_marginBottom="10dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/score"
-            android:text=""
+            android:text="@{viewmodel.score}"
             android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
