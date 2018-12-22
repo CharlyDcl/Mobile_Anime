@@ -4,6 +4,6 @@
 
 - When you click on an anime you get details about this one.
 
-- If you click on "add to favorite" it is added to the database and display on favorite activity.
+- If you click on "add to favorite" it is added to the database and display on the favorite activity.
 
 - In the favorite activity when you click on an anime you can delete it or update one or multiple values on the database.
