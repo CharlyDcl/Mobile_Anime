@@ -17,7 +17,7 @@ public class ItemViewModel {
     public int value;
 
     public ItemViewModel(Context context, String title, String descr, Integer episodes, Double score, Integer id){
-        //assign(random.nextInt(100) + 1);
+        assign(random.nextInt(100) + 1);
         this.title.set(title);
         this.description.set(descr);
         this.episodes.set(episodes.toString());
