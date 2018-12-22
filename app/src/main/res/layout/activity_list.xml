@@ -24,8 +24,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button android:onClick="@{() -> viewmodel.clear()}"
+            android:orientation="horizontal">            <Button android:onClick="@{() -> viewmodel.clear()}"
                 android:text="clear list"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content">
